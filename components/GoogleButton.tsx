@@ -1,6 +1,7 @@
-import { Button, ButtonProps } from '@mantine/core';
+import { Button, ButtonProps } from "@mantine/core";
+// import axios from "axios";
 
-function GoogleIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function GoogleIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -29,6 +30,18 @@ function GoogleIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   );
 }
 
-export function GoogleButton(props: ButtonProps & React.ComponentPropsWithoutRef<'button'>) {
-  return <Button leftSection={<GoogleIcon />} variant="default" {...props} />;
+export function GoogleButton(
+  props: ButtonProps & React.ComponentPropsWithoutRef<"button">
+) {
+  const handleGoogleLogin = () => {
+    window.location.href = `${process.env.NEXT_PUBLIC_BACKEND_URL}/oauth2/authorization/google`;
+  };
+  return (
+    <Button
+      leftSection={<GoogleIcon />}
+      variant="default"
+      onClick={handleGoogleLogin}
+      {...props}
+    />
+  );
 }

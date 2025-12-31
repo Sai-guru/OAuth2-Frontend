@@ -13,6 +13,8 @@
     "@mantine/form": "^8.3.10",
     "@mantine/hooks": "^8.3.10",
     "@mantinex/dev-icons": "^2.0.0",
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"
